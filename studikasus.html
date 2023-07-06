@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Studi Kasus JavaScript</title>
+</head>
+<body>
+  <h1>Studi Kasus JavaScript</h1>
+
+  <form onsubmit="handleSubmit(event)">
+    <label for="name">Nama:</label>
+    <input type="text" id="name" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="box" onload="boxLoaded(event)" ondblclick="boxDoubleClicked(event)" 
+       onmouseover="boxMouseOver(event)" onmouseout="boxMouseOut(event)">
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      var nameInput = document.getElementById('name');
+      var name = nameInput.value;
+      alert("Form telah terkirim! Nama yang dimasukkan: " + name);
+      nameInput.value = "";
+    }
+
+    function boxLoaded(event) {
+      alert("Kotak telah dimuat.");
+    }
+
+    function boxDoubleClicked(event) {
+      var box = event.target;
+      box.style.backgroundColor = "blue";
+      alert("Kotak telah diklik dua kali.");
+    }
+
+    function boxMouseOver(event) {
+      var box = event.target;
+      box.style.backgroundColor = "green";
+    }
+
+    function boxMouseOut(event) {
+      var box = event.target;
+      box.style.backgroundColor = "red";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Form JavaScript</title>
+</head>
+<body>
+  <script>
+    function showPrompt() {
+      var name = prompt("Masukkan nama Anda:");
+      if (name != null && name != "") {
+        alert("Halo, " + name + "! Terima kasih telah mengisi form.");
+      }
+    }
+
+    function showConfirm() {
+      var result = confirm("Apakah Anda yakin ingin mengirim form ini?");
+      if (result == true) {
+        alert("Form telah terkirim!");
+      } else {
+        alert("Pengiriman form dibatalkan.");
+      }
+    }
+  </script>
+
+  <h1>Form JavaScript</h1>
+
+  <button onclick="showPrompt()">Klik untuk mengisi form</button>
+  <br><br>
+  <button onclick="showConfirm()">Klik untuk mengirim form</button>
+
+</body>
+</html>
